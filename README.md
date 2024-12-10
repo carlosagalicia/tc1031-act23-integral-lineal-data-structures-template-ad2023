@@ -1,8 +1,8 @@
 ![Tec de Monterrey](images/logotecmty.png)
-# Act 2.3 - Actividad Integral estructura de datos lineales (Evidencia Competencia)
+# Act 2.3 - Comprehensive Activity on Linear Data Structures (Competency Evidence)
 
-## <span style="color: rgb(26, 99, 169);">¿Qué tengo que hacer?</span>
-En este repositorio encontrarás los archivos de entrada, así como las salidas esperadas que podrás usar para probar tu implementación. También encontrarás un archivo "main.cpp". Ahí deberás implementar tu solución. En el archivo deberás colocar en la parte superior, en comentarios, tus datos. Por ejemplo:
+## <span style="color: rgb(26, 99, 169);">What Do I Have to Do?</span>
+In this repository, you will find the input files as well as the expected outputs to test your implementation. You will also find a "main.cpp" file. You must implement your solution in this file. At the top of the file, include your personal information in comments. For example:
 ```
 // =========================================================
 // File: main.cpp
@@ -10,64 +10,62 @@ En este repositorio encontrarás los archivos de entrada, así como las salidas 
 // Date: 01/01/2021
 // =========================================================
 ```
-<span style="text-decoration: underline;">De manera individual</span>, desarrolla la solución del siguiente problema:
+<span style="text-decoration: underline;">Individually</span>, develop the solution for the following problem:
 
-El historiador Flavio Josefo relata cómo, en el conflicto romano-judío del año 67 d.C., los romanos tomaron el pueblo de Jotapata que él comandaba. Al escapar, Josefo se encontró atrapado en una cueva con 40 compañeros. Los romanos descubrieron su paradero y lo invitaron a rendirse, pero sus compañeros se negaron a permitírselo. Por lo tanto, sugirió que se mataran entre sí, uno por uno, el orden se decidiría por sorteo. La tradición dice que el medio para efectuar el sorteo era ponerse de pie en un círculo y, comenzando en algún punto, contar alrededor, matando a cada tercera persona por turno. El único sobreviviente de este proceso fue Josefo, quien luego se rindió a los romanos. Lo que plantea la pregunta: ¿Josefo había practicado previamente en silencio con 41 piedras en un rincón oscuro, o había calculado matemáticamente que debería adoptar la posición 31 para sobrevivir?
+The historian Flavius Josephus tells how, during the Roman-Jewish conflict of 67 CE, the Romans took the village of Jotapata, which he commanded. While escaping, Josephus found himself trapped in a cave with 40 companions. The Romans discovered their location and invited them to surrender, but his companions refused to let him. Therefore, he suggested that they kill each other, one by one, with the order decided by a draw. Tradition says the method for conducting the draw was to stand in a circle, and starting at some point, count around, killing every third person in turn. The sole survivor of this process was Josephus, who then surrendered to the Romans. This raises the question: Had Josephus quietly practiced beforehand with 41 stones in a dark corner, or had he calculated mathematically that he should adopt position 31 to survive?
 
-Después de leer un relato de este espantoso evento, te has obsesionado con el temor de encontrarte en una situación similar en algún momento en el futuro. Para prepararte para tal eventualidad, decides escribir un programa que determinará la posición en la que debe comenzar el proceso de conteo para asegurar que tú sea el único sobreviviente.
+After reading an account of this gruesome event, you have become obsessed with the fear of finding yourself in a similar situation in the future. To prepare for such an eventuality, you decide to write a program to determine the position where you should start the counting process to ensure that you are the sole survivor.
 
-En particular, tu programa debería poder manejar la siguiente variación de los procesos descritos por Josefo. *n* > 0 personas se disponen inicialmente en círculo, mirando hacia dentro, y numeradas del 1 al n en el sentido de las agujas del reloj. Tu número asignado es 1. Comenzando con la persona número *i*, el conteo comienza en el sentido de las agujas del reloj, hasta que llegamos a la persona número *k* (*k* > 0), que muere rápidamente. Luego procedemos a contar otras *k* personas en el sentido de las agujas del reloj, comenzando con la persona inmediatamente a la izquierda de la víctima. La persona número *k* así seleccionada tiene el trabajo de enterrar a la víctima, y luego regresar a la posición en el círculo que la víctima había ocupado previamente. Luego, el conteo continúa desde la persona a su izquierda inmediata, con la *k*-ésima persona siendo asesinada, y así sucesivamente, hasta que solo quede una persona.
+In particular, your program should be able to handle the following variation of the processes described by Josephus: *n* > 0 people are initially arranged in a circle, facing inward, and numbered from 1 to *n* in clockwise order. Your assigned number is 1. Starting with person number *i*, counting begins clockwise until person number *k* (*k* > 0) is reached, who quickly dies. The counting then proceeds *k* more people clockwise, starting with the person immediately to the left of the victim. The person numbered *k* thus selected buries the victim and then returns to the position in the circle previously occupied by the victim. Counting then continues from the person immediately to their left, with the *k*-th person being killed, and so on, until only one person remains.
 
-Por ejemplo, cuando *n* = 5, *k* = 2 e *i* = 1, el orden de ejecución es 2, 5, 3 y 1. El sobreviviente es 4.
+For example, when *n* = 5, *k* = 2, and *i* = 1, the execution order is 2, 5, 3, and 1. The survivor is 4.
 
-## <span style="color: rgb(26, 99, 169);">**Entrada**</span>
-Tu programa debe leer líneas de entrada que contengan valores para *n* y *k* (en ese orden). Tu programa puede asumir un máximo de 100 personas participando en este evento.
+## <span style="color: rgb(26, 99, 169);">**Input**</span>
+Your program must read input lines containing values for *n* and *k* (in that order). Your program can assume a maximum of 100 people participating in this event.
 
-## <span style="color: rgb(26, 99, 169);">**Salida**</span>
- Despliega el número de la persona con la que debe comenzar el conteo para asegurarse de que seas el único sobreviviente. Por ejemplo, en el caso anterior, la posición de inicio segura es 3.
+## <span style="color: rgb(26, 99, 169);">**Output**</span>
+Display the number of the person where the counting should start to ensure you are the sole survivor. For example, in the case above, the safe starting position is 3.
 
-## <span style="color: rgb(26, 99, 169);">**Ejemplo de entrada**</span>
+## <span style="color: rgb(26, 99, 169);">**Sample Input**</span>
 ```
 1 5
 ```
 
-## <span style="color: rgb(26, 99, 169);">**Ejemplo de salida**</span>
+## <span style="color: rgb(26, 99, 169);">**Sample Output**</span>
 ```
 1
 ```
 
-Para probar tu implementación, compila tu programa con el comando:
+To test your implementation, compile your program with the command:
 ```
 g++ -std=c++11 main.cpp -o app
 ```
-Posteriormente, prueba con cada uno de los archivos de entrada de prueba que encontrarás en este repositorio (input1.txt, input2.txt, input3.txt, input4.txt). Los resultados que debes obtener se encuentran en los archivos llamados output1.txt, output1.txt, output1.txt y output1.txt. Para realizar las pruebas, puedes usar las siguientes líneas de código. Por ejemplo, si queremos probar con el archivo de prueba "input1.txt".
+Then, test your solution with each of the input files provided in this repository (`input1.txt`, `input2.txt`, `input3.txt`, `input4.txt`). The expected results are in the files `output1.txt`, `output2.txt`, `output3.txt`, and `output4.txt`. To perform the tests, you can use the following commands. For example, to test with "input1.txt":
 ```
 ./app < input1.txt > mysolution1.txt
 diff mysolution1.txt output1.txt
 ```
-Si el segundo comando no tenga ninguna salida, sabrás que los resultados que obtuviste son los esperados. 
+If the second command produces no output, you know your results are as expected.
 
-Por último, realiza una investigación y reflexión en forma individual de la importancia y eficiencia del uso de los diferentes algoritmos de ordenamiento y búsqueda en una situación problema de esta naturaleza, generando un documento llamado **"ReflexAct2.3.pdf"**
+Finally, conduct individual research and reflection on the importance and efficiency of different sorting and searching algorithms in a problem situation like this, generating a document titled **"ReflexAct2.3.pdf"**.
 
-## <span style="color: rgb(26, 99, 169);">**¿Bajo qué criterios se evalúa mi evidencia?**</span>
+## <span style="color: rgb(26, 99, 169);">**How Is My Evidence Evaluated?**</span>
 
-- **80%** - Para cada una de las funcionalidades se evaluará:
+- **80%** - For each functionality, the evaluation will be:
+    - **Excellent (80%)** - correctly passes all test cases.
+    - **Very Good (60%)** - correctly passes 75% of test cases.
+    - **Good (40%)** - correctly passes 50% of test cases.
+    - **Insufficient (20%)** - correctly passes less than 50% of test cases.
 
-    - **Excelente (80%)** - pasa correctamente todos los casos de prueba.
-    - **Muy Bien (60%)** - pasa correctamente el 75% de los casos de prueba.
-    - **Bien (40%)** - pasa correctamente el 50% de los casos de prueba.
-    - **Insuficiente (20%)** - pasa correctamente menos del 50% de los casos de prueba.
+- **10%** - The code must follow the coding standards specified in the document: <span class="instructure_file_holder link_holder">[coding_standard_link](estandar.pdf)</span>.
+- **10%** - Function names in the application must be respected.
 
-
-- **10%** - El código deberá seguir los lineamientos estipulados en el estándar de codificación: <span class="instructure_file_holder link_holder">[liga_estándar_codificación](estandar.pdf)</span>
-- **10%** - Se respetenan los nombres de las funciones en la aplicación.
-
-## <span style="color: rgb(26, 99, 169);">**¿Dónde la entrego?**</span>
-Esta actividad forma parte tanto de tu calificación final del curso, así como del portafolio de evidencias de las competencias a desarrollar del curso, por lo que se te pide que en forma individual:
-* Realices una entrega de  los archivos correspondientes de los algoritmos de ordenamiento y búsqueda, en la sección correspondiente dentro de esta plataforma, así como el documento de reflexión individual (**ReflexAct2.3.pdf**).
-* Generes una carpeta en forma personal llamada **TC1031(Portafolio_Final)** que servirá como preparación para la entrega del portafolio de competencias que se realizará al final del curso, esta carpeta debe contener 5 carpetas:
+## <span style="color: rgb(26, 99, 169);">**Where Do I Submit It?**</span>
+This activity is part of your final course grade as well as the portfolio of evidence for the competencies to be developed in the course. Therefore, individually:
+* Submit the corresponding files for the sorting and searching algorithms in the appropriate section of this platform, along with the individual reflection document (**ReflexAct2.3.pdf**).
+* Create a personal folder named **TC1031(Final_Portfolio)** to prepare for the portfolio of competencies submission at the end of the course. This folder must contain 5 subfolders:
     * Act1.3
-    * **Act2.3** - coloca aquí tus archivos que solucionaron la <span style="text-decoration: underline;">actividad 2.3</span> así como el documento de reflexión individual (**ReflexAct2.3.pdf**).
+    * **Act2.3** - place your files that solved <span style="text-decoration: underline;">activity 2.3</span> along with the individual reflection document (**ReflexAct2.3.pdf**).
     * Act3.4
     * Act4.3
     * Act5.2
